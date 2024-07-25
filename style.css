@@ -1,0 +1,523 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+/* ESTILO GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #000;
+    height: 100vh;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+h2.titulo {
+    color: #fff;
+    font-size: 28px; 
+    text-align: center;
+    margin-top: 60px; 
+    margin-bottom: 40px; 
+}
+
+h2.titulo span {
+    color: #00FF08;
+}
+
+button:hover,
+form .btn-enviar input:hover {
+    box-shadow: 0px 0px 8px #00ff08;
+    transform: scale(1.05);
+}
+
+/* ESTILO DO CABEÇALHO */
+header {
+    padding: 40px 4%;
+}
+
+header>.interface {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+}
+
+header a {
+    color: #5c5c5c;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header nav.menu-desktop a:hover {
+    color: #fff;
+    transform: scale(1.05);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav.menu-desktop ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+.logo i {
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    border: 1px solid #2ecc71;
+    color: #2ecc71;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px; 
+    cursor: pointer;
+}
+
+/* ESTILO DO MENU MOBILE */
+.btn-abrir-menu {
+    display: none;
+}
+
+.btn-abrir-menu i {
+    color: #00FF08;
+    font-size: 40px;
+}
+
+.menu-mobile {
+    background-color: #000;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.menu-mobile.abrir-menu {
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu {
+    display: block;
+}
+
+.menu-mobile .btn-fechar {
+    padding: 20px 5%;
+}
+
+.menu-mobile .btn-fechar i {
+    color: #00FF08;
+    font-size: 30px;
+}
+
+.menu-mobile nav ul {
+    text-align: right;
+}
+
+.menu-mobile nav ul li a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover {
+    background-color: #00FF08;
+    color: #000;
+}
+
+.overlay-menu {
+    background-color: #000000df;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+/* ESTILO DO TOPO DO SITE */
+section.topo-do-site {
+    padding: 60px 4%; 
+}
+
+section.topo-do-site .flex {
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.topo-do-site .container-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.topo-do-site .text h3 {
+    color: #00ff08;
+    font-size: 30px;
+}
+
+.topo-do-site .text h1 {
+    color: #fff;
+    font-size: 40px;
+}
+
+.topo-do-site .text p {
+    color: #fff;
+    font-weight: 300;
+    margin: 20px 0 20px;
+}
+
+.topo-do-site .text span {
+    color: #00ff08;
+}
+
+.redes-social a {
+    margin-right: 15px;
+    color: #5c5c5c;
+    transition: .2s;
+}
+
+.redes-social a:hover {
+    color: #00FF08;
+}
+
+.redes-social a i {
+    font-size: 24px;
+}
+
+.home-buttons a {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 15px 20px;
+    border-radius: 8px;
+    transition: .5s;
+}
+
+.home-buttons a.btn-primary {
+    color: #000;
+    background-color: #fff;
+    margin-right: 15px;
+}
+
+.home-buttons a.btn-primary:hover {
+    background-color: #00ff08;
+}
+
+.home-buttons a.btn-secondary {
+    color: #00ff08;
+    border: 2px solid #00ff08;
+}
+
+.home-buttons a.btn-secondary:hover {
+    background-color: #00ff08;
+    color: #000;
+}
+
+section.topo-do-site .img-topo-site {
+    flex: 1;
+    animation: floating 3s infinite ease-in-out;
+}
+
+section.topo-do-site .img-topo-site img {
+    max-width: 100%;
+    border-radius: 50%; 
+}
+
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* ESPECIALIDADES */
+.especialidades {
+    padding: 60px 4%; 
+}
+
+.block-title {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px; 
+}
+
+.block-title h2 {
+    font-size: 30px; 
+}
+
+.clients {
+    display: flex;
+    flex-wrap: wrap; 
+    gap : 20px; 
+    justify-content: center; 
+}
+
+.client-block {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.client-block img {
+    width: 60px; 
+    height: auto;
+    display: block;
+}
+
+/* PROJETOS */
+section.Projetos {
+    padding: 40px 4%;
+}
+
+/* ESTILO DO PORTFÓLIO */
+section.portfolio {
+    padding: 60px 4%;  
+    box-shadow: none; 
+}
+
+section.portfolio .flex {
+    justify-content: space-between; 
+    margin-top: 30px; 
+}
+
+.img-port {
+    width: 300px; 
+    height: 400px;
+    background-size: cover;
+    background-position: center; 
+    border-radius: 20px; 
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.img-port:hover {
+    background-position: center; 
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b8;
+    border-radius: 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px; 
+    font-weight: 400;
+    color: #fff;
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.5s;
+    z-index: 1; /* Adiciona uma camada acima do link do projeto */
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+.project-link {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.5s ease; /* Adiciona transição suave para a opacidade */
+    z-index: 0; /* Adiciona uma camada abaixo do overlay */
+}
+
+.img-port:hover .overlay {
+    opacity: 1; 
+    z-index: 1; /* Traz o link do projeto acima do overlay ao passar o mouse */
+}
+
+.img-port:hover .project-link {
+    opacity: 1;
+    z-index: 2; /* Traz o link do projeto acima do overlay ao passar o mouse */
+}
+
+.project-link a {
+    color: #00ff08;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.project-link a:hover {
+    text-decoration: underline;
+}
+
+/* ESTILO DO PORTFÓLIO EM RESOLUÇÕES MENORES */
+@media screen and (max-width: 1020px) {
+    section.portfolio {
+        padding: 60px 8%; 
+    }
+
+    .img-port {
+        width: 100%;
+        max-width: 300px; 
+        margin: 0 auto;
+    }
+    
+    section.portfolio .flex {
+       gap: 20px;
+       flex-wrap: wrap;
+       justify-content: center; 
+    }
+}
+
+/* RODAPÉ */
+footer {
+    background-color: #111;
+    padding: 40px 4%;
+}
+
+footer .line-footer {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+}
+
+footer .line-footer p {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 300;
+}
+
+footer .line-footer i {
+    color: #00ff08;
+    margin-right: 10px;
+}
+
+footer .line-footer a {
+    text-decoration: none;
+    color: #fff;
+    transition: .2s;
+}
+
+footer .line-footer a:hover {
+    color: #00ff08;
+}
+
+footer .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+footer .footer-top div {
+    flex: 1;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+footer .footer-top h4 {
+    font-size: 18px;
+    color: #00ff08;
+    margin-bottom: 10px;
+}
+
+footer .footer-top p {
+    color: #fff;
+    font-size: 14px;
+}
+
+footer .footer-top a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .footer-top a:hover {
+    text-decoration: underline;
+}
+
+/* FORMULÁRIO DE CONTATO */
+section.formulario {
+    padding: 40px 4%;
+}
+
+section.formulario .form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+section.formulario h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section.formulario form {
+    display: flex;
+    flex-direction: column;
+}
+
+section.formulario form input,
+section.formulario form textarea {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+section.formulario form input:focus,
+section.formulario form textarea:focus {
+    border-color: #00ff08;
+}
+
+section.formulario form .btn-enviar {
+    text-align: center;
+}
+
+section.formulario form .btn-enviar input {
+    background-color: #00ff08;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+section.formulario form .btn-enviar input:hover {
+    background-color: #00cc06;
+}
